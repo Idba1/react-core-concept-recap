@@ -6,12 +6,12 @@ export default function Data(){
     useEffect (()=>{
         fetch('https://jsonplaceholder.typicode.com/todos')
         .then(res=> res.json())
-        .then(data => console.log(data))
+        .then(data => setData(data))
     },[])
 
     return(
         <div>
-            <h3>Data:</h3>
+            <h3>Data:{data.length}</h3>
         </div>
     )
 }
