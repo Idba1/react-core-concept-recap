@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import SingleData from "./SingleData";
 
 export default function Data(){
 
@@ -12,6 +13,9 @@ export default function Data(){
     return(
         <div>
             <h3>Data:{data.length}</h3>
+            {
+                data.map(single => <SingleData single={single}></SingleData>)
+            }
         </div>
     )
 }
